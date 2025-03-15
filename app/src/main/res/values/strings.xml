@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">lazarenko_01_04</string>
+    <string name="register">Регистрация</string>
+    <string name="enter_login_and_password">Введите ваш логин и пароль</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="enter">ВОЙТИ</string>
+    <string name="credit_calculator_title">Кредитный калькулятор</string>
+    <string name="what_you_need">Сколько вам нужно</string>
+    <string name="back">на главное меню</string>
+    <string name="rachet_label">Рассчитать</string>
+    <string name="srok_credit">Срок кредита</string>
+    <string name="pey_per_month">Ежемесячный платеж</string>
+</resources>

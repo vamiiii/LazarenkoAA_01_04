@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.Lazarenko_01_04.CreditCalculator">
+
+
+
+    <ImageButton
+        android:onClick="back_to_register"
+        android:id="@+id/back_to_main"
+        android:layout_width="63dp"
+        android:layout_height="49dp"
+        android:src="@drawable/strelka"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        tools:ignore="MissingConstraints,OnClick" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="32dp"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.009">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="413dp"
+        android:layout_height="571dp"
+        android:background="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.806" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toTopOf="@id/srok_credit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/what_you_need"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100000"
+                android:min="0"
+                android:progress="0"
+                android:progressTint="@color/green"
+                android:thumbTint="@color/green" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="от 30 000"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="190dp"
+                    android:text="до 100 000"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="12dp"
+                android:layout_marginLeft="140dp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/cardView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="375dp"
+        android:layout_height="65dp"
+        android:gravity="center"
+        android:text="@string/credit_calculator_title"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/enter"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_style"
+        android:text="Рассчитать"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.531"
+        tools:ignore="MissingConstraints">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <EditText
+        android:id="@+id/srok_credit"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:textAlignment="center"
+        android:background="@drawable/edit_text_design"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.415"
+        tools:ignore="MissingConstraints">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="143dp"
+        android:layout_height="20dp"
+        android:paddingLeft="5dp"
+        android:text="Введите срок кредита"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.406"
+        tools:ignore="MissingConstraints">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/pay_per_month"
+        android:layout_width="161dp"
+        android:layout_height="55dp"
+        android:textSize="10dp"
+        android:textAlignment="center"
+        android:background="@drawable/edit_text_design"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.673"
+        tools:ignore="MissingConstraints">
+
+    </EditText>
+
+    <TextView
+        android:layout_width="143dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:text="Ежемесячный платеж"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.649"
+        tools:ignore="MissingConstraints">
+
+    </TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
